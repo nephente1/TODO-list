@@ -5,7 +5,7 @@
   font-family: 'Poppins', sans-serif;  
 }
 body{
-  background: url('/images/bg.jpg');
+  background: url('https://raw.githubusercontent.com/nephente1/TODO-list/master/images/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
