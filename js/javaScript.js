@@ -3,11 +3,20 @@ document.addEventListener('DOMContentLoaded', function() {
 const task  = document.getElementById('task');
 const addBtn = document.getElementById('addBtn');
 
-addBtn.addEventListener('click', () => {
+
+
+addBtn.addEventListener('click', function(event){
+    
+    if(task.value === ""){
+        event.preventDefault();
+         alert('Wpisz zadanie!');
+         
+     } else{
+
     let newLi = document.createElement('li');
 
     let edit = document.createElement('button');
-    edit.innerHTML = '<i class="fas fa-edit"></i>';
+    edit.innerHTML = '<i class="fas fa-edit">edycja</i>';
 
     let complete = document.createElement('button');
     complete.innerHTML = '<i class="fas fa-check-circle"></i>';
@@ -28,11 +37,11 @@ addBtn.addEventListener('click', () => {
     edit.addEventListener('click',()=>{
             if (newLi.contentEditable == "true") {
                 newLi.contentEditable = "false";
-                edit.innerHTML = '<i class="fas fa-edit"></i>';       
+                edit.innerHTML = '<i class="fas fa-edit">edycja</i> ';       
             }
             else {
                 newLi.contentEditable = "true";
-                edit.innerHTML = '<i class="fas fa-check-square"></i>';
+                edit.innerHTML = '<i class="fas fa-check-square">akceptuj edycję</i> ';
             }
         
     });
@@ -72,11 +81,15 @@ addBtn.addEventListener('click', () => {
         }
 
     })
+}
+   
+});
+
+
 });
 
 
 
-});
 
 
 
@@ -89,6 +102,9 @@ addBtn.addEventListener('click', () => {
 
 
 
-
-
+function newFunction() {
+    if (event.which == 13 || event.keyCode == 13) {
+        event.preventDefault();
+    }
+}
 
