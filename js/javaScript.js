@@ -16,7 +16,7 @@ addBtn.addEventListener('click', function(event){
     let newLi = document.createElement('li');
 
     let edit = document.createElement('button');
-    edit.innerHTML = '<i class="fas fa-edit">edycja</i>';
+    edit.innerHTML = '<i class="fas fa-edit"></i>';
 
     let complete = document.createElement('button');
     complete.innerHTML = '<i class="fas fa-check-circle"></i>';
@@ -37,7 +37,7 @@ addBtn.addEventListener('click', function(event){
     edit.addEventListener('click',()=>{
             if (newLi.contentEditable == "true") {
                 newLi.contentEditable = "false";
-                edit.innerHTML = '<i class="fas fa-edit">edycja</i> ';       
+                edit.innerHTML = '<i class="fas fa-edit"></i> ';       
             }
             else {
                 newLi.contentEditable = "true";

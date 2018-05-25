@@ -124,3 +124,10 @@ button:hover{
   background:#6a4d8f;
 }
 
+button .fa-check-circle:hover{
+  background:#6a4d8f;
+}
+
+button .fas fa-edit::after{
+   content: 'edycja';
+}
