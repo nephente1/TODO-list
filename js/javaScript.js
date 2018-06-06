@@ -24,7 +24,7 @@ addBtn.addEventListener('click', function(event){
     minus.innerHTML = '<i class="fas fa-minus-circle"></i>';
 
     document.getElementById('todoList').appendChild(newLi);
-    newLi.innerText = `${task.value}`;
+    newLi.innerHTML = `${task.value}`;
     newLi.appendChild(complete);
     newLi.appendChild(minus);
     newLi.appendChild(edit);
@@ -38,12 +38,12 @@ addBtn.addEventListener('click', function(event){
             if (newLi.contentEditable == "true") {
                 newLi.contentEditable = "false";
                 edit.innerHTML = '<i class="fas fa-edit"></i> ';
-                newLi.appendChild(complete);
-                newLi.appendChild(minus);
+                complete.innerHTML = '<i class="fas fa-check-circle"></i>';
+                minus.innerHTML = '<i class="fas fa-minus-circle"></i>';
             }
             else {
                 newLi.contentEditable = "true";
-                edit.innerHTML = '<i class="fas fa-check-square">akceptuj edycję</i> ';
+                edit.innerHTML = '<i class="fas fa-check-square">akceptuj edycję</i>';
             }
         
     });
