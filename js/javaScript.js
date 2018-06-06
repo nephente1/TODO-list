@@ -37,7 +37,9 @@ addBtn.addEventListener('click', function(event){
     edit.addEventListener('click',()=>{
             if (newLi.contentEditable == "true") {
                 newLi.contentEditable = "false";
-                edit.innerHTML = '<i class="fas fa-edit"></i> ';       
+                edit.innerHTML = '<i class="fas fa-edit"></i> ';
+                newLi.appendChild(complete);
+                newLi.appendChild(minus);
             }
             else {
                 newLi.contentEditable = "true";
